@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>Enviar mail</title>
+  </head>
+  <body>
+
+    <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <div id="contenido" class="m2">
+
+                    <header id="header" class=" pink darken-1">
+                        Enviar Nuevo Mail
+                    </header>
+                    <form id="enviar-mail" action="#" class="col s10 offset-s1">
+                        <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email">
+                                    <label for="email">Para:</label>
+                                </div>
+                                <div class="input-field col s12">
+                                        <input id="asunto" type="text">
+                                        <label for="asunto">Asunto</label>
+                                </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                <textarea id="mensaje" class="materialize-textarea"></textarea>
+                                <label for="mensaje">Mensaje</label>
+                                </div>
+                            </div>
+                            <div class="row" id="loaders">
+
+                                <img id="spinner" src="img/spinner.gif" width="150">
+                            </div>
+                            <div class="row">
+                                    <div class="col s6">
+                                        <button id="enviar" class="btn waves-effect waves-light  pink darken-2" type="submit" name="action">Enviar
+                                                <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button id="resetBtn" class="btn waves-effect waves-light light-blue darken-2" type="submit">Reset
+                                                <i class="material-icons right">delete</i>
+                                        </button>
+                                    </div>
+                            </div>
+                    </form>
+
+                </div> <!--.contenido-->
+            </div>
+        </div>
+        <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
+        <form class="" action="index.html" method="post">
+          <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Materialize Select</label>
+  </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/app.js">
+      M.toast({html: 'I am a toast!'})
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+  $('select').formSelect();
+});
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    </script>
+  </body>
+</html>

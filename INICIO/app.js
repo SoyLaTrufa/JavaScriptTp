@@ -1,37 +1,97 @@
+// PROMISES()
+const descuento = new Promise(function (resolve, reject) {
+  let desAplicado = false;
+  if (desAplicado) {
+    resolve('si hay descuento');
+  } else {
+    reject('no hay descuento');
+  }
+});
+
+descuento.then(function (mensaje) {
+  console.log(mensaje);
+}).catch(function (error) {
+  console.log(error);
+});
+// const esperando = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     resolve('se resolvió');
+//   }, 3000);
+// });
+//
+// esperando.then(function (mensaje) {
+//   console.log(mensaje);
+// });
+// callbacks
+// const paises = ['España', 'Portugal', 'Inglaterra', 'Islandia', 'Suiza'];
+//
+// function mostrarPaises () {
+//   setTimeout(function(){
+//     let html = '';
+//     paises.forEach(function (pais) {
+//       html += `<p>${pais}</p>`;
+//     });
+//     document.getElementById('app').innerHTML = html;
+//   }, 1000);
+// }
+//
+//
+// function nuevoPais (pais, callback) {
+//   setTimeout(function () {
+//     paises.push(pais);
+//     callback();
+//   }, 2000);
+//   console.log(pais);
+// }
+//
+// mostrarPaises();
+// nuevoPais('China', mostrarPaises);
+// let ciudades = ['Tokio', 'Viena', 'Madrid', 'Rio Janeiro', 'Londres'];
+//
+// ciudades.forEach(function (ciudad) {
+//   console.log(ciudad);
+// });
+//
+// function callback (ciudad) {
+//   console.log(ciudad);
+// }
+//
+// ciudades.forEach(callback);
+// -------------------------------------------------
 // CALSES
-class Cliente {
-  constructor (nombre, saldo, apellido) {
-    this.nombre = nombre;
-    this.saldo = saldo;
-    this.apellido = apellido;
-  }
-
-  imprimirSaldo () {
-    return ` hola ${this.nombre} tu saldo es de ${this.saldo} `;
-  }
-  static Bienenida (nombre) {
-    return `hola ${nombre}, bienvenido al cajero`
-  }
-}
-
-class Empresa extends Cliente {
-  constructor (nombre, saldo, tel, tipo) {
-    super(nombre, saldo);
-    this.tel = tel;
-    this.tipo = tipo;
-  }
-  static Bienenida (nombre) {
-    return `hola ${nombre}, bienvenido a la empresa`
-  }
-}
-
-let maria = new Cliente('maria', 'lopez', 900);
-let empresa1 = new Empresa('Udemy', 500000, 156787654, 'Educacion');
-console.log(empresa1.imprimirSaldo());
-console.log(Empresa.Bienenida('lalal'));
-
-console.log(Cliente.Bienenida('sdfsdf'));
-console.log(maria.imprimirSaldo());
+// class Cliente {
+//   constructor (nombre, saldo, apellido) {
+//     this.nombre = nombre;
+//     this.saldo = saldo;
+//     this.apellido = apellido;
+//   }
+//
+//   imprimirSaldo () {
+//     return ` hola ${this.nombre} tu saldo es de ${this.saldo} `;
+//   }
+//   static Bienenida (nombre) {
+//     return `hola ${nombre}, bienvenido al cajero`
+//   }
+// }
+//
+// class Empresa extends Cliente {
+//   constructor (nombre, saldo, tel, tipo) {
+//     super(nombre, saldo);
+//     this.tel = tel;
+//     this.tipo = tipo;
+//   }
+//   static Bienenida (nombre) {
+//     return `hola ${nombre}, bienvenido a la empresa`
+//   }
+// }
+//
+// let maria = new Cliente('maria', 'lopez', 900);
+// let empresa1 = new Empresa('Udemy', 500000, 156787654, 'Educacion');
+// console.log(empresa1.imprimirSaldo());
+// console.log(Empresa.Bienenida('lalal'));
+//
+// console.log(Cliente.Bienenida('sdfsdf'));
+// console.log(maria.imprimirSaldo());
 
 // heredar prototypes
 // function Cliente (nombre, saldo) {
